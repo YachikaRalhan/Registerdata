@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 export class UserService {
 
   user = '';
+  pass='';
   constructor() { }
  getuserid()
  {
