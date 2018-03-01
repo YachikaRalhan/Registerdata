@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
     <span style="font-weight: bold;">Mother's name: </span><input [(ngModel)]="motherName" type="text"><br/>
     <button id=save (click)="save()">Save</button>
     </div>
-  </div>
   <div>
     <div *ngIf="!editable" class=details>
     <label>Name</label>{{name}}<br/>
@@ -63,7 +62,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profile = this._profileService.getdetail();
-    if (this._profileService.getdetail().fatherName !== '') {
+    if (this._profileService.getdetail().motherName !== '') {
       this.editable = false;
       this.name = this.profile.name;
       this.age = this.profile.age;
